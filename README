@@ -1,0 +1,10 @@
+######## Professor Falken's Puppet Modules ###########
+
+A work in progress!
+
+Details of each module can be found on http://www.threedrunkensysadsonthe.net 
+and in the README file in each directory.
+
+These modules _should_ just check out into your puppet module path
+
+Please send all feedback to theprofessor@threedrunkensysadsonthe.net
