@@ -1,0 +1,7 @@
+WARNING - THIS MODULE IS NOT FOR PRODUCTION USE AT PRESENT
+
+This module will allow automated deployment of MCollective via puppet.
+
+It needs various defines created to role out the correct RPMS and a custom repository configured with the correct packages before it will work!
+
+It is just a template at present, more will be added in the next few days.
