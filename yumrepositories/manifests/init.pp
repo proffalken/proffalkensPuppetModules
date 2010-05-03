@@ -54,7 +54,7 @@ define yumrepository ($srcpkg = $srcpkg,$title=$title,$name=$name,$baseurl = $ba
 			owner   => root,
 	                group   => root,
 	                mode    => 644,
-	                content => template("/usr/share/puppet/modules/yumrepositories/templates/repo.template.rb"),
+	                content => template("yumrepositories/repo.template.rb"),
 	        }
 	}
 }
