@@ -3,7 +3,10 @@
 class mcollective {
 
 	# ensure the correct repositories are set up
-	repository { "elff" }
+	# WARNING - YOU WILL NEED TO WRITE THE "repository" DEFINITION OR ENSURE THE REPO IS INSTALLED BY OTHER MEANS!
+	# THE "mcollective" REPO CURRENTLY NEEDS TO BE MANUALLY CREATED FROM THE RPMS ON THE MCOLLECTIVE GOOGLE CODE
+	# WEBSITE USING MREPO OR SIMILAR!
+	repository { ["elff"],["mcollective"] }
 
 	# install the "common" package required for both client and server
 	package { "mcollective-common":
