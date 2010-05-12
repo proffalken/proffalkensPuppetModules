@@ -39,7 +39,7 @@ class mcollective::server inherits mcollective {
 
 	# setup the service and ensure it has the relevant files and packages installed.
 	service {"mcollective":
-		ensure => present,
+		ensure => running,
 		hasrestart => true,
 		require => [Package["mcollective-server"],File["mcollective-server.cfg"]],
 		subscribe => [Package["mcollective-server"],File["mcollective-server.cfg"]],
