@@ -20,7 +20,7 @@ class mcollective {
 	# WARNING - YOU WILL NEED TO WRITE THE "repository" DEFINITION OR ENSURE THE REPO IS INSTALLED BY OTHER MEANS!
 	# THE "mcollective" REPO CURRENTLY NEEDS TO BE MANUALLY CREATED FROM THE RPMS ON THE MCOLLECTIVE GOOGLE CODE
 	# WEBSITE USING MREPO OR SIMILAR!
-	repository { ["elff"],["mcollective"] }
+#	repository { ["elff"],["mcollective"] }
 
 	# install the "common" package required for both client and server
 	package { "mcollective-common":
@@ -69,7 +69,7 @@ class mcollective::client {
 		path => "/etc/mcollective/client.cfg",
 		owner => "root",
 		group => "root",
-		mode => 440
+		mode => 440,
 		path => "/etc/mcollective/client.cfg",
 		require => Package["mcollective-client"],
 		subscribe => Package["mcollective-client"],
