@@ -12,10 +12,15 @@
 # 
 # You should have received a copy of the GNU General Public License
 # along with "Professor Falken's Puppet Modules".  If not, see <http://www.gnu.org/licenses/>.
-WARNING - THIS MODULE IS NOT FOR PRODUCTION USE AT PRESENT
-
 This module will allow automated deployment of MCollective via puppet.
 
-It needs various defines created to role out the correct RPMS and a custom repository configured with the correct packages before it will work!
+It is known to work on Centos 5.4 distributions and requires a custom repo for MCollective RPMS in order for the packages to work.
 
-It is just a template at present, more will be added in the next few days.
+If you need to setup a Custom Repo, you can obtain instructions on how to do so at 
+http://www.threedrunkensysadsonthe.net/2010/05/create-a-local-repository-for-mcollective-and-activemq/
+
+To deploy new agents, simply copy the files into the "files/agent" directory and they will be deployed on the next puppet run.
+
+I have included R.I. Pienaar's puppet and service agents as part of the default package so that on first run, you have all the resources required to manage puppet and other services and rapidly deploy agents in future.
+
+The default configuration (although you'll need to change the servername and user/password) also deploys R.I.'s facter.rb fact source to allow you to act on hosts based on fact variables.
